@@ -1,0 +1,8 @@
+  body { background:#f6f7fb; font-family: Arial, sans-serif; }
+        .chat-card { max-width:720px; margin:30px auto; }
+        #messageArea { height: 420px; overflow-y: auto; display:flex; flex-direction:column; gap:8px; padding:12px; }
+        .bubble { padding:10px 14px; border-radius:16px; max-width:70%; }
+        .sent { background:#0d6efd; color:#fff; align-self:flex-end; }
+        .recv { background:#e9ecef; align-self:flex-start; color:#000; }
+        .meta { font-size:0.75rem; color:#666; margin-top:4px; }
+        .username-input { width:200px; }
