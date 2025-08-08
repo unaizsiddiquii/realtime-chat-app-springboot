@@ -1,42 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title>Realtime Chat</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body { background:#f6f7fb; font-family: Arial, sans-serif; }
-        .chat-card { max-width:720px; margin:30px auto; }
-        #messageArea { height: 420px; overflow-y: auto; display:flex; flex-direction:column; gap:8px; padding:12px; }
-        .bubble { padding:10px 14px; border-radius:16px; max-width:70%; }
-        .sent { background:#0d6efd; color:#fff; align-self:flex-end; }
-        .recv { background:#e9ecef; align-self:flex-start; color:#000; }
-        .meta { font-size:0.75rem; color:#666; margin-top:4px; }
-        .username-input { width:200px; }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
-</head>
-<body>
-<div class="card chat-card shadow">
-    <div class="card-header d-flex justify-content-between align-items-center">
-        <h5 class="mb-0">💬 Realtime Chat</h5>
-        <div>
-            <input id="username" class="form-control form-control-sm username-input" placeholder="Your name"/>
-        </div>
-    </div>
 
-    <div id="messageArea" class="card-body"></div>
-
-    <div class="card-footer">
-        <div class="input-group">
-            <input id="messageInput" type="text" class="form-control" placeholder="Type a message...">
-            <button id="sendBtn" class="btn btn-primary">Send</button>
-        </div>
-    </div>
-</div>
-
-<script>
     let stompClient = null;
     let myUsername = '';
 
@@ -119,6 +81,3 @@
       // do nothing; wait for username and user action
       // If you want auto-connect: call connect();
     });
-</script>
-</body>
-</html>
